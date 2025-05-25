@@ -146,9 +146,7 @@ def replace_placeholders(file_name: str) -> None:
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        raise Exception(
-            "usage: python3 bootstrap-template.py <name_for_extension_in_snake_case>"
-        )
+        raise Exception("usage: python3 bootstrap-template.py pdb")
 
     name_extension = sys.argv[1]
 
@@ -174,12 +172,12 @@ if __name__ == "__main__":
 
     replace_everywhere("quack", name_extension)
     replace_everywhere("Quack", name_extension.capitalize())
-    replace_everywhere("<extension_name>", name_extension)
+    replace_everywhere("pdb", name_extension)
 
     remove_placeholder()
 
     string_to_replace = name_extension
-    string_to_find = "quack"
+    string_to_find = "pdb"
 
     # rename files
     os.rename(f"test/sql/{string_to_find}.test", f"test/sql/{string_to_replace}.test")

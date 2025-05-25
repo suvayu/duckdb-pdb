@@ -4,7 +4,7 @@
 
 namespace duckdb {
 
-class PDBExtension : public Extension {
+class PdbExtension : public Extension {
 public:
 	void Load(DuckDB &db) override;
 	std::string Name() override;
