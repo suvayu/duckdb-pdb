@@ -1,4 +1,4 @@
-PROJ_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))/
+PROJ_DIR := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
 # Configuration of extension
 EXT_NAME=pdb
