@@ -1,12 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
 
-if(DEFINED ENV{VCPKG_ROOT})
-    set(VCPKG_ROOT $ENV{VCPKG_ROOT})
-else()
-    message(FATAL_ERROR "Please set the VCPKG_ROOT environment variable to the path of your vcpkg installation.")
-endif()
-set(CMAKE_TOOLCHAIN_FILE "${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" CACHE STRING "Vcpkg toolchain file")
-
 # Set extension name here
 set(TARGET_NAME pdb)
 
