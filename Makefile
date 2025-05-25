@@ -5,7 +5,7 @@ EXT_NAME=pdb
 EXT_CONFIG=${PROJ_DIR}extension_config.cmake
 
 ifneq (${VCPKG_ROOT}, "")
-	VCPKG_TOOLCHAIN_PATH="${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+	VCPKG_TOOLCHAIN_PATH=${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake
 endif
 
 # Include the Makefile from extension-ci-tools
